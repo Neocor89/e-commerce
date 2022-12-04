@@ -5,7 +5,7 @@
 /.env.test
 .env.test
 .env
-.env.test
+/.env.test
 /.env.local.php
 /.env.*.local
 .env.local/
