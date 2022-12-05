@@ -3,28 +3,33 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>
-			{% block title %}Welcome!
+			{% block title %}SFY
 			{% endblock %}
+			store
 		</title>
 		<link rel="icon" type="image/png" sizes="192x192" href="{{ asset('assets/favicon/favicon-Sf6.png')}}">
 		<meta
 		name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-		<!-- TailwindCSS -->
-		<script src="https://cdn.tailwindcss.com"></script>
-
 		<!-- Links CSS -->
-		{% block stylesheets %}{% endblock %}
+		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"> {% block stylesheets %}{% endblock %}
 		<link
 		rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 
 		<!-- JS Files -->
+		<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" defer></script>
 		{% block javascripts %}{% endblock %}
 		<script src="{{ asset('assets/js/main.js') }}" defer></script>
 
 	</head>
 	<body>
+
+		<!-- Import NavBar Component -->
+		{% include "_partials/_nav.html.twig" %}
+
+		<!-- Import Footer Component -->
 		{% block body %}{% endblock %}
+		{% include "_partials/_footer.html.twig" %}
+
 	</body>
 </html>
