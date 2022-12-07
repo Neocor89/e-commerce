@@ -46,7 +46,7 @@ class UsersAuthenticator extends AbstractLoginFormAuthenticator
             return new RedirectResponse($targetPath);
         }
 
-        // User redirected:
+        //: User redirection
         return new RedirectResponse($this->urlGenerator->generate('main'));
         //throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }

@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SignUp
+{% endblock %}
+
+{% block body %}
+	<section class="container">
+		<div class="row">
+			<div class="col">
+				<h1>SignUp</h1>
+
+				<!-- Fields Form -->
+				{{ form_start(registrationForm) }}
+
+				<fieldset class="mb-3">
+					<legend>User Info</legend>
+					{{ form_row(registrationForm.lastname) }}
+					{{ form_row(registrationForm.firstname) }}
+					{{ form_row(registrationForm.email) }}
+				</fieldset>
+
+				<fieldset class="mb-3">
+					<legend>Contact information</legend>
+					{{ form_row(registrationForm.address) }}
+					{{ form_row(registrationForm.zipcode) }}
+					{{ form_row(registrationForm.city) }}
+				</fieldset>
+
+
+				{{ form_row(registrationForm.plainPassword, {
+                            label: 'Password'
+                        }) }}
+				{{ form_row(registrationForm.RGPDConsent) }}
+
+				<button type="submit" class="btn btn-success btn-lg my-3">SignUp</button>
+				{{ form_end(registrationForm) }}
+			</div>
+		</div>
+	</section>
+{% endblock %}
