@@ -23,32 +23,38 @@ class RegistrationFormType extends AbstractType
             ->add('email', EmailType::class, [
                 'attr' => [
                     'class' => 'form-control mb-1'
-                ]
+                ],
+                'label' => 'E-mail'
             ])
             ->add('lastname', TextType::class, [
                 'attr' => [
                     'class' => 'form-control mb-1'
-                ]
+                ],
+                'label' => 'Lastname'
             ])
             ->add('firstname', TextType::class, [
                 'attr' => [
                     'class' => 'form-control mb-1'
-                ]
+                ],
+                'label' => 'firstname'
             ])
             ->add('address', TextType::class, [
                 'attr' => [
                     'class' => 'form-control mb-1'
-                ]
+                ],
+                'label' => 'address'
             ])
             ->add('zipcode', TextType::class, [
                 'attr' => [
                     'class' => 'form-control mb-1'
-                ]
+                ],
+                'label' => 'zipcode'
             ])
             ->add('city', TextType::class, [
                 'attr' => [
                     'class' => 'form-control mb-1'
-                ]
+                ],
+                'label' => 'city'
             ])
             ->add('RGPDConsent', CheckboxType::class, [
                 'mapped' => false,
@@ -60,8 +66,6 @@ class RegistrationFormType extends AbstractType
                 'label' => 'Terms of Use'
             ])
             ->add('plainPassword', PasswordType::class, [
-                // instead of being set onto the object directly,
-                // this is read and encoded in the controller
                 'mapped' => false,
                 'attr' => [
                     'autocomplete' => 'new-password',
@@ -78,6 +82,7 @@ class RegistrationFormType extends AbstractType
                         'max' => 4096,
                     ]),
                 ],
+                'label' => 'Your password'
             ]);
     }
 
